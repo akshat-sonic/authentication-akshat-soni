@@ -13,7 +13,8 @@ public class UserController {
 
     @PostMapping
     ResponseEntity<UserResponse> create(@RequestBody CreateUserRequest userRequest) throws InvalidEmailException {
-        throw new NullPointerException();
+        User user = userService.create(userRequest);
+        return new ResponseEntity<>(new UserResponse(user), HttpStatus.CREATED);
     }
 
     @PatchMapping("/{id}")

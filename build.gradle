@@ -4,9 +4,9 @@ plugins {
 	id 'java'
 }
 
-group = 'com.bootcamp'
+group = 'com.tw.bootcamp'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '18'
+sourceCompatibility = '11'
 
 configurations {
 	compileOnly {
@@ -23,6 +23,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation "org.springframework.boot:spring-boot-starter-security"
 	implementation 'org.flywaydb:flyway-core'
+	implementation 'org.passay:passay:1.6.1'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testCompileOnly 'org.projectlombok:lombok'
